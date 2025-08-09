@@ -135,9 +135,21 @@ export default function RegistrationForm() {
                   <FormLabel className="text-sm font-medium text-gray-700">Data de Nascimento</FormLabel>
                   <FormControl>
                     <Input 
-                      type="date" 
+                      type="text" 
+                      placeholder="DD/MM/AAAA"
                       className="focus:ring-na-guarda-red focus:border-transparent"
-                      {...field} 
+                      maxLength={10}
+                      onChange={(e) => {
+                        let value = e.target.value.replace(/\D/g, '');
+                        if (value.length >= 2) {
+                          value = value.substring(0, 2) + '/' + value.substring(2);
+                        }
+                        if (value.length >= 5) {
+                          value = value.substring(0, 5) + '/' + value.substring(5, 9);
+                        }
+                        field.onChange(value);
+                      }}
+                      value={field.value}
                     />
                   </FormControl>
                   <FormMessage />
