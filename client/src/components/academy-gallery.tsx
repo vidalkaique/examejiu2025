@@ -25,7 +25,7 @@ export default function AcademyGallery() {
             key={index}
             src={image.src}
             alt={image.alt}
-            className={`w-full ${index === 0 ? 'h-48' : 'h-32'} object-contain rounded-xl ${index === 0 ? 'bg-gray-100' : ''}`}
+            className="w-full object-contain rounded-xl bg-gray-100"
           />
         ))}
       </div>

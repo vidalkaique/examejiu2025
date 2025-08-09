@@ -6,7 +6,7 @@ export default function HeroSection() {
       <img 
         src={headerImage} 
         alt="NA GUARDA JJ Team" 
-        className="w-full h-48 object-cover rounded-2xl shadow-lg mb-6" 
+        className="w-full object-contain rounded-2xl shadow-lg mb-6" 
       />
       
       <h1 className="text-xl font-bold text-na-guarda-dark mb-2">NA GUARDA JJ</h1>
