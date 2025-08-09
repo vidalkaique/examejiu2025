@@ -35,8 +35,8 @@ export default function PixModal({ isOpen, onClose, onConfirm, registrationData 
   // Obter valor da faixa selecionada
   const beltPrice = getBeltPrice(registrationData.beltColor);
   
-  // Gerar chave PIX aleatória (simulação)
-  const pixKey = "00020126360014BR.GOV.BCB.PIX0114+5571997294034520400005303986540550.005802BR5925LEANDRO RODRIGUES SANTOS6014XIQUE-XIQUE-BA62070503***6304A1B2";
+  // Chave PIX oficial
+  const pixKey = "00020126650014br.gov.bcb.pix0136b4955b6b-b83e-429f-bb0e-72e143d6937f0203Pix5204000053039865802BR5925LEANDRO RODRIGUES DO NASC6005IRECE62290525aUfoBynDHH9p1xRPEGxWctfsK63042ADC";
   
   const copyPixKey = async () => {
     try {
