@@ -20,7 +20,6 @@ interface PixModalProps {
 
 const getBeltPrice = (beltColor: string): number => {
   const prices = {
-    'branca': 0,
     'azul': 350,
     'roxa': 450,
     'marrom': 600,
@@ -59,10 +58,9 @@ export default function PixModal({ isOpen, onClose, onConfirm, registrationData 
 
   const handleSendWhatsApp = () => {
     const beltColorEmojis = {
-      branca: "⚪",
       azul: "🔵", 
       roxa: "🟣",
-      marrom: "🤎",
+      marrom: "🟤",
       preta: "⚫"
     };
 
