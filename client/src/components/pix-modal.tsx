@@ -18,9 +18,23 @@ interface PixModalProps {
   };
 }
 
+const getBeltPrice = (beltColor: string): number => {
+  const prices = {
+    'branca': 0,
+    'azul': 350,
+    'roxa': 450,
+    'marrom': 600,
+    'preta': 1200
+  };
+  return prices[beltColor as keyof typeof prices] || 0;
+};
+
 export default function PixModal({ isOpen, onClose, onConfirm, registrationData }: PixModalProps) {
   const { toast } = useToast();
   const [copied, setCopied] = useState(false);
+  
+  // Obter valor da faixa selecionada
+  const beltPrice = getBeltPrice(registrationData.beltColor);
   
   // Gerar chave PIX aleatória (simulação)
   const pixKey = "00020126360014BR.GOV.BCB.PIX0114+5571997294034520400005303986540550.005802BR5925LEANDRO RODRIGUES SANTOS6014XIQUE-XIQUE-BA62070503***6304A1B2";
@@ -77,8 +91,12 @@ Realizei o pagamento via PIX conforme orientado. Segue em anexo o comprovante.`;
         <div className="space-y-4">
           <div className="text-center">
             <div className="bg-gray-100 p-4 rounded-lg mb-4">
-              <h3 className="font-semibold mb-2">Valor: R$ 50,00</h3>
-              <p className="text-sm text-gray-600">Taxa de inscrição para o exame de faixa</p>
+              <h3 className="font-semibold mb-2">
+                Valor: R$ {beltPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+              </h3>
+              <p className="text-sm text-gray-600">
+                Taxa de inscrição para o exame de faixa {registrationData.beltColor}
+              </p>
             </div>
           </div>
 

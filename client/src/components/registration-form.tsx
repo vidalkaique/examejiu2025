@@ -224,10 +224,10 @@ export default function RegistrationForm() {
                     </FormControl>
                     <SelectContent>
                       <SelectItem value="branca">⚪ Branca</SelectItem>
-                      <SelectItem value="azul">🔵 Azul</SelectItem>
-                      <SelectItem value="roxa">🟣 Roxa</SelectItem>
-                      <SelectItem value="marrom">🤎 Marrom</SelectItem>
-                      <SelectItem value="preta">⚫ Preta</SelectItem>
+                      <SelectItem value="azul">🔵 Azul - R$ 350,00</SelectItem>
+                      <SelectItem value="roxa">🟣 Roxa - R$ 450,00</SelectItem>
+                      <SelectItem value="marrom">🤎 Marrom - R$ 600,00</SelectItem>
+                      <SelectItem value="preta">⚫ Preta - R$ 1.200,00</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
