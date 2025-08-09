@@ -1,4 +1,5 @@
 import exameBanner from "@assets/image_1754709091633.png";
+import personalFitImage from "@assets/image_1754709336821.png";
 
 export default function AcademyGallery() {
   const academyImages = [
@@ -7,8 +8,8 @@ export default function AcademyGallery() {
       alt: "III Exame de Faixa 2025"
     },
     {
-      src: "https://images.unsplash.com/photo-1540479859555-17af45c78602?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
-      alt: "Technique Demonstration"
+      src: personalFitImage,
+      alt: "Academia Personal FIT - Local do Exame"
     },
     {
       src: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
