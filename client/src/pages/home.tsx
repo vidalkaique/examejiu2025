@@ -2,7 +2,6 @@ import HeroSection from "../components/hero-section";
 import AcademyGallery from "../components/academy-gallery";
 import PromotionBanner from "../components/promotion-banner";
 import RegistrationForm from "../components/registration-form";
-import InstructorProfile from "../components/instructor-profile";
 import Footer from "../components/footer";
 
 export default function Home() {
@@ -12,7 +11,6 @@ export default function Home() {
       <AcademyGallery />
       <PromotionBanner />
       <RegistrationForm />
-      <InstructorProfile />
       <Footer />
     </div>
   );
