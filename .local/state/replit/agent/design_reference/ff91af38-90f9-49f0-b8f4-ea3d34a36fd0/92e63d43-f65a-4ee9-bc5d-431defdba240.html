@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NA GUARDA JJ - Academia de Jiu-Jitsu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'na-guarda-red': '#FF0000',
+                        'na-guarda-dark': '#333333',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white font-sans">
+    <!-- @COMPONENT: Header -->
+    <div class="w-full max-w-sm mx-auto bg-white min-h-screen">
+        
+        <!-- Hero Section -->
+        <!-- @COMPONENT: HeroSection -->
+        <section class="text-center px-4 pt-8 pb-4">
+            <!-- Group photo of jiu-jitsu practitioners in training gear -->
+            <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                 alt="NA GUARDA JJ Team" 
+                 class="w-full h-48 object-cover rounded-2xl shadow-lg mb-6" 
+                 data-mock="true">
+            
+            <h1 class="text-xl font-bold text-na-guarda-dark mb-2">NA GUARDA JJ</h1>
+            <p class="text-sm text-gray-600 mb-8">Filial - Xique-xique/BA.</p>
+        </section>
+        <!-- @END_COMPONENT: HeroSection -->
+
+        <!-- Academy Photos Section -->
+        <!-- @COMPONENT: AcademyGallery -->
+        <section class="px-4 mb-8">
+            <div class="grid grid-cols-1 gap-4">
+                <!-- Brazilian jiu-jitsu training session with students on mats -->
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                     alt="Training Session" 
+                     class="w-full h-32 object-cover rounded-xl"
+                     data-mock="true">
+                
+                <!-- Martial arts academy interior with training equipment -->
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400" 
+                     alt="Academy Interior" 
+                     class="w-full h-32 object-cover rounded-xl"
+                     data-mock="true">
+                
+                <!-- Jiu-jitsu practitioners demonstrating techniques -->
+                <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                     alt="Technique Demonstration" 
+                     class="w-full h-32 object-cover rounded-xl"
+                     data-mock="true">
+                
+                <!-- Group of martial arts students in training uniforms -->
+                <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                     alt="Students Group" 
+                     class="w-full h-32 object-cover rounded-xl"
+                     data-mock="true">
+            </div>
+        </section>
+        <!-- @END_COMPONENT: AcademyGallery -->
+
+        <!-- Promotion Announcement -->
+        <!-- @COMPONENT: PromotionBanner -->
+        <section class="text-center px-4 mb-8">
+            <h2 class="text-2xl font-bold text-na-guarda-red mb-2">III EXAME DE FAIXA</h2>
+            <div class="text-6xl font-black text-na-guarda-red">2025</div>
+        </section>
+        <!-- @END_COMPONENT: PromotionBanner -->
+
+        <!-- Graduandos 2025 Section -->
+        <!-- @COMPONENT: GraduandosGallery -->
+        <section class="px-4 mb-8">
+            <h3 class="text-lg font-bold text-na-guarda-dark mb-4">GRADUANDOS 2025</h3>
+            
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <!-- @MAP: graduandos.map(graduando => ( -->
+                <!-- Jiu-jitsu belt graduation ceremony with student receiving new belt -->
+                <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
+                     alt="Graduando 2025" 
+                     class="w-full h-32 object-cover rounded-lg"
+                     data-mock="true">
+                
+                <!-- Martial arts student proudly displaying new belt achievement -->
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
+                     alt="Graduando 2025" 
+                     class="w-full h-32 object-cover rounded-lg"
+                     data-mock="true">
+                
+                <!-- Jiu-jitsu graduation ceremony with instructor presenting belt -->
+                <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
+                     alt="Graduando 2025" 
+                     class="w-full h-32 object-cover rounded-lg"
+                     data-mock="true">
+                
+                <!-- Group photo of newly promoted jiu-jitsu practitioners -->
+                <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
+                     alt="Graduando 2025" 
+                     class="w-full h-32 object-cover rounded-lg"
+                     data-mock="true">
+                <!-- @END_MAP )) -->
+            </div>
+            
+            <!-- Additional graduation photos in single column -->
+            <div class="space-y-3">
+                <!-- Brazilian jiu-jitsu belt ceremony with family and friends -->
+                <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400" 
+                     alt="Graduation Ceremony" 
+                     class="w-full h-32 object-cover rounded-lg"
+                     data-mock="true">
+                     
+                <!-- Martial arts academy graduation group photo -->
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400" 
+                     alt="Academy Graduation" 
+                     class="w-full h-32 object-cover rounded-lg"
+                     data-mock="true">
+            </div>
+        </section>
+        <!-- @END_COMPONENT: GraduandosGallery -->
+
+        <!-- Registration Section -->
+        <!-- @COMPONENT: RegistrationForm -->
+        <section class="px-4 mb-8">
+            <div class="bg-gray-50 rounded-xl p-6">
+                <h3 class="text-lg font-bold text-na-guarda-dark mb-4 text-center">INSCRIÇÕES AQUI</h3>
+                
+                <form class="space-y-4" data-implementation="Should validate form and handle submission">
+                    <!-- @STATE: formData:object = {} -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Nome Completo</label>
+                        <input type="text" 
+                               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-na-guarda-red focus:border-transparent"
+                               data-bind="formData.name"
+                               data-mock="true"
+                               placeholder="Digite seu nome">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
+                        <div class="flex space-x-2">
+                            <select class="w-24 px-2 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-na-guarda-red"
+                                    data-bind="formData.countryCode"
+                                    data-mock="true">
+                                <option value="+55">🇧🇷 +55</option>
+                                <option value="+1">🇺🇸 +1</option>
+                                <option value="+44">🇬🇧 +44</option>
+                                <option value="+33">🇫🇷 +33</option>
+                                <option value="+49">🇩🇪 +49</option>
+                            </select>
+                            <input type="tel" 
+                                   class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-na-guarda-red focus:border-transparent"
+                                   data-bind="formData.phone"
+                                   data-mock="true"
+                                   placeholder="(11) 99999-9999">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" 
+                               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-na-guarda-red focus:border-transparent"
+                               data-bind="formData.email"
+                               data-mock="true"
+                               placeholder="seu@email.com">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Experiência em Jiu-Jitsu</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-na-guarda-red"
+                                data-bind="formData.experience"
+                                data-mock="true">
+                            <option value="">Selecione sua experiência</option>
+                            <option value="iniciante">Iniciante</option>
+                            <option value="intermediario">Intermediário</option>
+                            <option value="avancado">Avançado</option>
+                        </select>
+                    </div>
+                    
+                    <!-- reCAPTCHA placeholder -->
+                    <div class="bg-gray-100 border border-gray-300 rounded p-4 text-center text-sm text-gray-600">
+                        <i class="fas fa-shield-alt mb-2"></i>
+                        <div>reCAPTCHA</div>
+                        <div class="text-xs mt-1">
+                            Protected by <strong>reCAPTCHA</strong><br>
+                            <a href="#" class="text-blue-600 hover:underline">Privacy</a> - 
+                            <a href="#" class="text-blue-600 hover:underline">Terms</a>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" 
+                            class="w-full bg-na-guarda-red text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition-colors"
+                            data-event="click:handleSubmit">
+                        Enviar Inscrição
+                    </button>
+                    
+                    <p class="text-xs text-gray-500 text-center">
+                        Ao enviar seus dados, você concorda em ser contatado pela academia.
+                    </p>
+                </form>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: RegistrationForm -->
+
+        <!-- Instructor Profile -->
+        <!-- @COMPONENT: InstructorProfile -->
+        <section class="px-4 mb-8">
+            <div class="text-center">
+                <!-- Professional photo of Brazilian Jiu-Jitsu instructor in gi -->
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300" 
+                     alt="Leandro Rodrigues" 
+                     class="w-20 h-20 rounded-full mx-auto mb-4 object-cover shadow-lg"
+                     data-mock="true">
+                
+                <h3 class="text-lg font-bold text-na-guarda-dark mb-1">LEANDRO RODRIGUES</h3>
+                <p class="text-sm text-gray-600 mb-4">Faixa Preta e Presidente da equipe NA GUARDA JJ</p>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: InstructorProfile -->
+
+        <!-- WhatsApp Contact -->
+        <!-- @COMPONENT: WhatsAppContact -->
+        <section class="px-4 mb-8">
+            <a href="https://wa.me/5571997294034" 
+               class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-xl text-center transition-colors"
+               data-event="click:openWhatsApp">
+                <i class="fab fa-whatsapp text-xl mr-2"></i>
+                <div class="text-sm">▶️ PAGAMENTO</div>
+                <div class="text-xs opacity-90">wa.me/5571997294034</div>
+            </a>
+        </section>
+        <!-- @END_COMPONENT: WhatsAppContact -->
+
+        <!-- Footer -->
+        <!-- @COMPONENT: Footer -->
+        <footer class="px-4 pb-8 text-center">
+            <div class="text-xs text-gray-500">
+                <p class="mb-2">© 2025 NA GUARDA JJ - Todos os direitos reservados</p>
+                <p>Filial Xique-xique/BA</p>
+            </div>
+        </footer>
+        <!-- @END_COMPONENT: Footer -->
+        
+    </div>
+
+    <script>
+        // TODO: Implement form validation and submission logic
+        (function() {
+            // Form handling placeholder
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Add form validation
+                    // TODO: Handle form submission to backend
+                    console.log('Form submission intercepted - implement actual logic');
+                });
+            }
+
+            // WhatsApp link tracking
+            const whatsappLink = document.querySelector('[data-event="click:openWhatsApp"]');
+            if (whatsappLink) {
+                whatsappLink.addEventListener('click', function() {
+                    // TODO: Add analytics tracking for WhatsApp clicks
+                    console.log('WhatsApp contact initiated');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
