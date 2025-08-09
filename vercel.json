@@ -1,21 +1,9 @@
 {
-  "version": 2,
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/server/index.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/client/dist/$1"
-    }
-  ],
-  "outputDirectory": "client/dist",
   "buildCommand": "npm run vercel-build",
-  "devCommand": "npm run dev",
+  "outputDirectory": "client/dist",
   "installCommand": "npm install",
   "functions": {
-    "server/index.ts": {
+    "api/**/*.ts": {
       "maxDuration": 30
     }
   }
