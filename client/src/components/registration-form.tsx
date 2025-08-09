@@ -5,6 +5,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { insertRegistrationSchema, type InsertRegistration } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import PixModal from "./pix-modal";
 import {
   Form,
   FormControl,
@@ -35,15 +36,18 @@ export default function RegistrationForm() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showPixModal, setShowPixModal] = useState(false);
+  const [formData, setFormData] = useState<InsertRegistration | null>(null);
 
   const form = useForm<InsertRegistration>({
     resolver: zodResolver(insertRegistrationSchema),
     defaultValues: {
       name: "",
+      birthDate: "",
       phone: "",
       countryCode: "+55",
       email: "",
-      experience: undefined,
+      beltColor: undefined,
     },
   });
 
@@ -71,7 +75,15 @@ export default function RegistrationForm() {
   });
 
   const onSubmit = (data: InsertRegistration) => {
-    registerMutation.mutate(data);
+    setFormData(data);
+    setShowPixModal(true);
+  };
+
+  const handlePixConfirm = () => {
+    if (formData) {
+      registerMutation.mutate(formData);
+    }
+    setShowPixModal(false);
   };
 
   if (isSubmitted) {
@@ -105,7 +117,25 @@ export default function RegistrationForm() {
                   <FormLabel className="text-sm font-medium text-gray-700">Nome Completo</FormLabel>
                   <FormControl>
                     <Input 
-                      placeholder="Digite seu nome" 
+                      placeholder="Digite seu nome completo" 
+                      className="focus:ring-na-guarda-red focus:border-transparent"
+                      {...field} 
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="birthDate"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-sm font-medium text-gray-700">Data de Nascimento</FormLabel>
+                  <FormControl>
+                    <Input 
+                      type="date" 
                       className="focus:ring-na-guarda-red focus:border-transparent"
                       {...field} 
                     />
@@ -182,20 +212,22 @@ export default function RegistrationForm() {
 
             <FormField
               control={form.control}
-              name="experience"
+              name="beltColor"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-medium text-gray-700">Experiência em Jiu-Jitsu</FormLabel>
+                  <FormLabel className="text-sm font-medium text-gray-700">Cor da Faixa</FormLabel>
                   <Select onValueChange={field.onChange} value={field.value}>
                     <FormControl>
                       <SelectTrigger className="focus:ring-na-guarda-red">
-                        <SelectValue placeholder="Selecione sua experiência" />
+                        <SelectValue placeholder="Selecione a cor da sua faixa" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="iniciante">Iniciante</SelectItem>
-                      <SelectItem value="intermediario">Intermediário</SelectItem>
-                      <SelectItem value="avancado">Avançado</SelectItem>
+                      <SelectItem value="branca">⚪ Branca</SelectItem>
+                      <SelectItem value="azul">🔵 Azul</SelectItem>
+                      <SelectItem value="roxa">🟣 Roxa</SelectItem>
+                      <SelectItem value="marrom">🤎 Marrom</SelectItem>
+                      <SelectItem value="preta">⚫ Preta</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -218,15 +250,24 @@ export default function RegistrationForm() {
               className="w-full bg-na-guarda-red text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition-colors"
               disabled={registerMutation.isPending}
             >
-              {registerMutation.isPending ? "Enviando..." : "Enviar Inscrição"}
+              {registerMutation.isPending ? "Enviando..." : "Continuar para Pagamento"}
             </Button>
 
             <p className="text-xs text-gray-500 text-center">
-              Ao enviar seus dados, você concorda em ser contatado pela academia.
+              Ao continuar, você será direcionado para realizar o pagamento via PIX.
             </p>
           </form>
         </Form>
       </div>
+
+      {formData && (
+        <PixModal
+          isOpen={showPixModal}
+          onClose={() => setShowPixModal(false)}
+          onConfirm={handlePixConfirm}
+          registrationData={formData}
+        />
+      )}
     </section>
   );
 }

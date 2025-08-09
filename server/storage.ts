@@ -40,6 +40,7 @@ export class MemStorage implements IStorage {
     const registration: Registration = {
       ...insertRegistration,
       id,
+      countryCode: insertRegistration.countryCode || "+55",
       createdAt: new Date(),
     };
     this.registrations.set(id, registration);
