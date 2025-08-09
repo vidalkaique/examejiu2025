@@ -1,7 +1,6 @@
 import HeroSection from "../components/hero-section";
 import AcademyGallery from "../components/academy-gallery";
 import PromotionBanner from "../components/promotion-banner";
-import GraduandosCarousel from "../components/graduandos-carousel.tsx";
 import RegistrationForm from "../components/registration-form";
 import InstructorProfile from "../components/instructor-profile";
 import Footer from "../components/footer";
@@ -12,7 +11,6 @@ export default function Home() {
       <HeroSection />
       <AcademyGallery />
       <PromotionBanner />
-      <GraduandosCarousel />
       <RegistrationForm />
       <InstructorProfile />
       <Footer />

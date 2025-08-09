@@ -1,34 +1,4 @@
-import exameBanner from "@assets/image_1754709091633.png";
-import personalFitImage from "@assets/image_1754709336821.png";
-
 export default function AcademyGallery() {
-  const academyImages = [
-    {
-      src: exameBanner,
-      alt: "III Exame de Faixa 2025"
-    },
-    {
-      src: personalFitImage,
-      alt: "Academia Personal FIT - Local do Exame"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
-      alt: "Students Group"
-    }
-  ];
-
-  return (
-    <section className="px-4 mb-8">
-      <div className="grid grid-cols-1 gap-4">
-        {academyImages.map((image, index) => (
-          <img 
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            className="w-full object-contain rounded-xl bg-gray-100"
-          />
-        ))}
-      </div>
-    </section>
-  );
+  // Componente removido - galeria vazia conforme solicitado
+  return null;
 }
