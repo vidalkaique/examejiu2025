@@ -76,7 +76,7 @@ export default function PixModal({ isOpen, onClose, onConfirm, registrationData 
 
 Realizei o pagamento via PIX conforme orientado. Segue em anexo o comprovante.`;
 
-    const whatsappUrl = `https://wa.me/5571997294034?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5574999659361?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     onConfirm();
   };
